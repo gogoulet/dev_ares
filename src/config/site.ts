@@ -1,50 +1,48 @@
 export const siteConfig = {
-  name: "Ombra",
-  title: "Ombra - A Restaurant by Elia Marchetti",
+  name: "Ares World",
+  title: "Ares World — Global Sovereign Protection & Elite Insulated Networks",
   description:
-    "Ombra is a two-Michelin-star tasting counter in the old quarter. Twelve seats, one fire, one season at a time.",
+    "High-end operational security (OpSec), digital/physical intelligence audits, counter-surveillance, and world-class private medical and lifestyle concierge networks for global family offices.",
   locale: "en_US",
-  defaultImage: "/og.png",
+  defaultImage: "/dev_ares/og.png", // Préfixé avec ton sous-dossier GitHub Pages
   address: {
-    street: "No. 14 Vico dei Fonditori",
-    locality: "Milan",
-    postalCode: "20121",
-    country: "Italy",
+    street: "1100 Boulevard des Forges",
+    locality: "Trois-Rivières",
+    postalCode: "G9A 6A7",
+    country: "Canada",
   },
-  phone: "+39 02 4477 0014",
-  email: "house@ombra.rest",
+  phone: "+1 819 555 0199", // À remplacer par ton numéro sécurisé
+  email: "operations@ares.world",
   nav: [
-    { label: "Concept", href: "#concept" },
-    { label: "Menu", href: "#menu" },
-    { label: "Chef", href: "#chef" },
-    { label: "Sala", href: "#interior" },
+    { label: "Paradigm", href: "/dev_ares/#concept" },
+    { label: "Capabilities", href: "/dev_ares/#tasting" },
+    { label: "Oversight", href: "/dev_ares/#chef" },
+    { label: "Posture", href: "/dev_ares/#interior" },
   ],
   reservation: {
-    formAction: "mailto:house@ombra.rest",
+    formAction: "mailto:operations@ares.world",
     method: "post",
-    note: "Replace the mailto action with your booking provider, form endpoint, or server action when going live.",
+    note: "Replace the mailto action with an encrypted webhook or secure backend endpoint when going live.",
   },
   hours: {
-    serviceDays: "Wed - Sat",
-    seatings: "19:30 and 21:45",
-    closed: "Sun, Mon, Tue",
+    serviceDays: "Mon - Fri",
+    seatings: "By Appointment Only",
+    closed: "Sat, Sun",
     schema: {
-      dayOfWeek: ["Wednesday", "Thursday", "Friday", "Saturday"],
-      opens: "19:30",
-      closes: "23:45",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "08:30",
+      closes: "17:30",
     },
   },
-  restaurant: {
-    priceRange: "EUR245",
-    cuisine: ["Italian", "Seasonal tasting menu", "Wood-fired"],
+  firm: {
+    securityFocus: ["Operational Security (OpSec)", "Digital & Physical Audits", "Family Office Protection", "Global Concierge"],
   },
   effects: {
     reveal: true,
   },
   social: [
-    { label: "Instagram", href: "https://www.instagram.com/" },
-    { label: "Journal", href: "https://substack.com/" },
-    { label: "Spotify", href: "https://open.spotify.com/" },
+    { label: "GitHub", href: "https://github.com/gogoulet/dev_ares/" },
+    { label: "Signal", href: "https://signal.org/" },
   ],
 } as const;
 
