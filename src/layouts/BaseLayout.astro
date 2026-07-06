@@ -1,5 +1,4 @@
 ---
-import "../styles.css";
 import SeoHead from "../components/SeoHead.astro";
 import { siteConfig } from "../config/site";
 
@@ -12,6 +11,9 @@ type Props = {
 };
 
 const { title, description, image, structuredData, enableReveal = siteConfig.effects.reveal } = Astro.props;
+
+// On récupère la base URL configurée (ex: /dev_ares) pour injecter dynamiquement les bons chemins
+const base = Astro.baseUrl ?? "";
 ---
 
 <!doctype html>
@@ -20,6 +22,10 @@ const { title, description, image, structuredData, enableReveal = siteConfig.eff
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#17130f" />
+    
+    {/* On injecte le style en tenant compte de la base de l'application */}
+    <link rel="stylesheet" href={`${base}/styles.css`} />
+
     {enableReveal && (
       <script is:inline>
         document.documentElement.classList.add("reveal-ready");
