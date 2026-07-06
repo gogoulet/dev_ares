@@ -1,5 +1,4 @@
 ---
-import "../styles.css";
 import SeoHead from "../components/SeoHead.astro";
 import { siteConfig } from "../config/site";
 
@@ -20,6 +19,12 @@ const { title, description, image, structuredData, enableReveal = siteConfig.eff
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#17130f" />
+    
+    {/* Cette balise force Astro à injecter le CSS directement dans le code source HTML */}
+    <style is:global>
+      @import "../styles.css";
+    </style>
+
     {enableReveal && (
       <script is:inline>
         document.documentElement.classList.add("reveal-ready");
@@ -28,7 +33,7 @@ const { title, description, image, structuredData, enableReveal = siteConfig.eff
     <SeoHead title={title} description={description} image={image} structuredData={structuredData} />
   </head>
   <body>
-    <a class="skip-link" href={`${import.meta.env.BASE_URL}#main`}>Skip to content</a>
+    <a class="skip-link" href="#main">Skip to content</a>
     <div class="site-shell">
       <slot />
     </div>
