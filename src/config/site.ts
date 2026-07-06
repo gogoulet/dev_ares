@@ -4,14 +4,14 @@ export const siteConfig = {
   description:
     "High-end operational security (OpSec), digital/physical intelligence audits, counter-surveillance, and world-class private medical and lifestyle concierge networks for global family offices.",
   locale: "en_US",
-  defaultImage: "/dev_ares/og.png", // Préfixé avec ton sous-dossier GitHub Pages
+  defaultImage: "/dev_ares/og.png",
   address: {
     street: "1100 Boulevard des Forges",
     locality: "Trois-Rivières",
     postalCode: "G9A 6A7",
     country: "Canada",
   },
-  phone: "+1 819 555 0199", // À remplacer par ton numéro sécurisé
+  phone: "+1 819 555 0199",
   email: "operations@ares.world",
   nav: [
     { label: "Paradigm", href: "/dev_ares/#concept" },
@@ -34,8 +34,10 @@ export const siteConfig = {
       closes: "17:30",
     },
   },
-  firm: {
-    securityFocus: ["Operational Security (OpSec)", "Digital & Physical Audits", "Family Office Protection", "Global Concierge"],
+  // Cet objet est requis par src/pages/index.astro pour les balises SEO de l'ancien thème restaurant
+  restaurant: {
+    priceRange: "N/A",
+    cuisine: ["Operational Security", "Corporate Intelligence"],
   },
   effects: {
     reveal: true,
