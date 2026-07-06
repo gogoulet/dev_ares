@@ -34,7 +34,7 @@ export const siteConfig = {
       closes: "17:30",
     },
   },
-  // Cet objet est requis par src/pages/index.astro pour les balises SEO de l'ancien thème restaurant
+  // Cet objet DOIT exister exactement ainsi car le HTML du thème l'utilise plus bas pour l'affichage
   restaurant: {
     priceRange: "N/A",
     cuisine: ["Operational Security", "Corporate Intelligence"],
