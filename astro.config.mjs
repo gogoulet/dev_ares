@@ -2,7 +2,10 @@ import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
-  site: "https://ombra-astro.vercel.app",
+  // Ton URL finale publique sur GitHub Pages
+  site: "https://gogoulet.github.io",
+  // Le nom exact de ton repository avec les slashes obligatoires
+  base: "/dev_ares/",
   trailingSlash: "never",
   integrations: [sitemap()],
   image: {
